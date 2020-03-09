@@ -2561,7 +2561,6 @@ Event(20005581, Restart, function(X0_4, X4_4) {
     DeactivateObjactAssignIdx(X0_4, X4_4, 3, Disabled);
 });
 
-// Setup Door Use Area
 Event(20005610, Default, function(X0_4, X4_4, X8_4) {
     SetNetworkSyncState(Disabled);
     GotoIfEventFlag(Label.LABEL1, ON, TargetEventFlagType.EventFlag, X0_4);
@@ -2605,7 +2604,7 @@ Event(20005612, Default, function(X0_4, X4_4) {
     SetEventFlag(X0_4, ON);
 });
 
-// Setup Door - Use
+// Setup Door 
 Event(20005613, Restart, function(X0_4, X4_4, X8_4, X12_4, X16_4) {
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
     GotoIfEventFlag(Label.LABEL0, ON, TargetEventFlagType.EventFlag, X0_4);
@@ -2628,7 +2627,6 @@ Event(20005614, Default, function(X0_4, X4_4) {
     EndUnconditionally(EventEndType.Restart);
 });
 
-// Setup Lift
 Event(20005620, Default, function(X0_4, X4_4, X8_4, X12_4, X16_4, X20_4) {
     SkipIfNumberOfClientsOfType(1, ClientType.Invader, ComparisonType.Equal, 0);
     SetEventFlag(X20_4, OFF);
@@ -3016,7 +3014,6 @@ Event(20005628, Restart, function(X0_4, X4_4, X8_4) {
     EndUnconditionally(EventEndType.Restart);
 });
 
-// Setup Kick Ladder
 Event(20005640, Restart, function(X0_4, X4_4, X8_4, X12_4) {
     GotoIfEventFlag(Label.LABEL0, OFF, TargetEventFlagType.EventFlag, X0_4);
     ReproduceObjectAnimation(X4_4, 2);
